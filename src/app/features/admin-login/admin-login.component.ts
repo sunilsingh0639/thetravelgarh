@@ -1,11 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-login',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './admin-login.component.html',
   styleUrl: './admin-login.component.scss'
 })
-export class AdminLoginComponent {
+export class AdminLoginComponent implements OnInit{
+  loginForm! : FormGroup;
 
+  constructor (private _fb : FormBuilder) {}
+
+  ngOnInit(): void {
+    this.initilizeLoginForm();
+  }
+
+  initilizeLoginForm() {
+    this.loginForm = this._fb.group({
+      userName : ['', [Validators.required]],
+      password : ['', [Validators.required]]
+    })
+  }
+
+  submit() {
+    console.log(this.loginForm.value);
+    
+  }
 }
