@@ -1,8 +1,41 @@
-.main {
-    min-height: 100vh;
-    background: #6998AB;
-}
+.auth-one-bg {
+    background-image: url(/assets/velzon/images/auth-one-bg.jpg);
+    background-position: center;
+    background-size: cover;
 
-.hero {
-    padding: 6rem 0 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 380px;
+}
+.shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.shape>svg {
+    width: 100%;
+    height: auto;
+    fill: var(--vz-body-bg);
+}
+.auth-one-bg .bg-overlay {
+    background: -webkit-gradient(linear, left top, right top, from(#41319c), to(#4b38b3));
+    background: linear-gradient(to right, #41319c, #4b38b3);
+    opacity: .9;
+}
+.bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    opacity: .7;
+    background-color: #000;
 }
