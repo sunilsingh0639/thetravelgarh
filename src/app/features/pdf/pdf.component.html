@@ -1,0 +1,53 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="departure">Departure</label>
+      <input type="text" id="departure" [(ngModel)]="tourData.departure" name="departure">
+    </div>
+
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" [(ngModel)]="tourData.destination" name="destination">
+    </div>
+
+    <div class="form-group">
+      <label for="departureDate">Departure Date</label>
+      <input type="date" id="departureDate" [(ngModel)]="tourData.departureDate" name="departureDate">
+    </div>
+
+    <div class="form-group">
+      <label for="totalDays">Total Days</label>
+      <input type="number" id="totalDays" [(ngModel)]="tourData.totalDays" name="totalDays">
+    </div>
+
+    <div class="form-group">
+      <label for="numTravelers">Number of Travelers</label>
+      <input type="number" id="numTravelers" [(ngModel)]="tourData.numTravelers" name="numTravelers">
+    </div>
+
+    <div class="form-group">
+      <label for="numRooms">Number of Rooms</label>
+      <input type="number" id="numRooms" [(ngModel)]="tourData.numRooms" name="numRooms">
+    </div>
+
+    <div class="images-section">
+      <img [src]="tourCompanyLogo.src" 
+           [width]="tourCompanyLogo.width" 
+           [height]="tourCompanyLogo.height" 
+           loading="lazy" 
+           alt="Tour Company Logo">
+
+      <div class="destination-images">
+        <img *ngFor="let image of destinationImages" 
+             [src]="image.src" 
+             [width]="image.width" 
+             [height]="image.height" 
+             loading="lazy" 
+             alt="Destination Image">
+      </div>
+    </div>
+
+    <button type="submit">Generate PDF</button>
+  </form>
+</div>
+  

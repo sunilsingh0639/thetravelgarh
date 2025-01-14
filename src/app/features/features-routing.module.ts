@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SummaryComponent } from './summary/summary.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'summary',
     component: SummaryComponent
+  },
+  {
+    path: 'pdf',
+    component: PdfComponent
   }
 ];
 

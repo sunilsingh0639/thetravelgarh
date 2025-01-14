@@ -34,7 +34,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/velzon/css/custom.min.css",
+              "src/assets/velzon/css/icons.min.css",
+              "src/assets/velzon/css/bootstrap.min.css"
             ],
             "scripts": []
           },
